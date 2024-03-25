@@ -17,19 +17,19 @@ const Navbar = () => {
               </Link>
               <Link
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/about"
+                href="/"
               >
                 About
               </Link>
               <Link
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/about"
+                href="/"
               >
                 Works
               </Link>
               <Link
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/bbs-posts/create"
+                href="/"
               >
                 Contact
               </Link>
