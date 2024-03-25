@@ -1,57 +1,19 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import Header from "@/components/body/header";
+import About from "@/components/body/about";
+import Works from "@/components/body/works";
+import Skills from "@/components/body/skills";
+import { ContactForm } from "@/components/body/contact";
 
 export default function Home() {
   return (
     <div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
-        <div>
-          <Carousel className="w-full max-w-xs">
-            <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">{index + 1}</span>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-
-        <div>
-          <Card>
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>Card Content</p>
-            </CardContent>
-            <CardFooter>Card Footer</CardFooter>
-          </Card>
-        </div>
-
+      <main>
+        <Header />
+        <About />
+        <Works />
+        <Skills />
+        <ContactForm />
       </main>
     </div>
   );

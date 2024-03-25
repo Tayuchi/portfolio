@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Separator } from "@/components/ui/separator"
 
 const Navbar = () => {
     return (
@@ -13,20 +14,23 @@ const Navbar = () => {
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="/"
               >
-                Top
-              </Link>
-              <Link
-                className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/"
-              >
                 About
               </Link>
+              <Separator orientation='vertical'/>
               <Link
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="/"
               >
                 Works
               </Link>
+              <Separator orientation='vertical'/>
+              <Link
+                className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="/"
+              >
+                Skills
+              </Link>
+              <Separator orientation='vertical'/>
               <Link
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="/"
