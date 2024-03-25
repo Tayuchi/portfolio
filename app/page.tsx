@@ -1,20 +1,58 @@
-import Image from "next/image";
-import Header from "./components/layouts/header";
-import Footer from "./components/layouts/footer";
-import Navbar from "./components/layouts/navbar";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function Home() {
   return (
     <div>
-      <Navbar/>
-
-      <Header />
-      
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        Tayu's portfolio
-      </main>
 
-      <Footer />
+        <div>
+          <Carousel className="w-full max-w-xs">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">{index + 1}</span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        <div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Card Title</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>Card Content</p>
+            </CardContent>
+            <CardFooter>Card Footer</CardFooter>
+          </Card>
+        </div>
+
+      </main>
     </div>
   );
 }
