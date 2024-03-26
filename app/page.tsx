@@ -3,11 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { useRef } from "react";
-import Header from "@/components/body/header";
-import About from "@/components/body/about";
-import Works from "@/components/body/works";
-import Skills from "@/components/body/skills";
-import { ContactForm } from "@/components/body/contact";
+import Header from "@/components/layouts/header";
+import About from "@/components/layouts/about";
+import Works from "@/components/layouts/works";
+import Skills from "@/components/layouts/skills";
+import { ContactForm } from "@/components/layouts/contact";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
