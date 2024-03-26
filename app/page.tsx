@@ -9,7 +9,6 @@ import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
 import { ContactForm } from "@/components/layouts/contact";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const scrollaboutRef = useRef<HTMLDivElement>(null);
