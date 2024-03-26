@@ -49,7 +49,7 @@ export function ContactForm() {
     <div className='flex flex-col items-center justify-between p-20'>
       <h3 className="text-2xl font-semibold text-center">Contact</h3>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
             name="bio"
