@@ -4,7 +4,7 @@ import Image from 'next/image'
 const About = () => {
   return (
     <div className='flex flex-col items-center justify-between p-20'>
-      <h1 className="text-2xl font-semibold text-center mb-5">About</h1>
+      <h1 className="text-2xl font-semibold text-center mb-5">Profile</h1>
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex-shrink-0">
           <Image
@@ -22,7 +22,7 @@ const About = () => {
             2019年9月 ロンドン大学キングスカレッジ 入学<br />
             2020年1月 ロンドン大学キングスカレッジ 中途退学<br />
             2021年4月 情報科学専門学校 情報セキュリティ学科 入学<br />
-            趣味:プログラミング、麻雀、映画鑑賞<br />
+            趣味:プログラミング、麻雀、映画鑑賞、英語学習<br />
           </p>
         </div>
       </div>

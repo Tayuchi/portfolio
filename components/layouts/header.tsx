@@ -6,8 +6,8 @@ const Header = () => {
         <Image
           src="/header.png"
           alt="Tayu's header image"
-          width="800"
-          height="0"
+          width="700"
+          height="500"
           className="rounded-md object-cover mt-5"
         />
       </div>

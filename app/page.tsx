@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useRef } from "react";
 import Header from "@/components/layouts/header";
-import About from "@/components/layouts/about";
+import About from "@/components/layouts/profile";
 import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
 import { ContactForm } from "@/components/layouts/contact";
@@ -41,7 +41,7 @@ export default function Home() {
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 onClick={() => scrollAbout()}
               >
-                About
+                Profile
               </button>
               <Separator orientation='vertical'/>
               <button
