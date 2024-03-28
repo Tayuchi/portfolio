@@ -41,7 +41,7 @@ export default function Home() {
                 className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 onClick={() => scrollAbout()}
               >
-                Profile
+                About
               </button>
               <Separator orientation='vertical'/>
               <button
@@ -81,7 +81,7 @@ export default function Home() {
         <div ref={scrollcontactRef}>
           <ContactForm />
         </div>
-        <div className='flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-whitedark:bg-gray-800 p-2'>
+        <div className='font-medium text-gray-500 transition-colors flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-whitedark:bg-gray-800 p-2'>
             &copy;2024 Tayu 
         </div>
       </main>
