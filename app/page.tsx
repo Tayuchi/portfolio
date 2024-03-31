@@ -7,7 +7,7 @@ import Header from "@/components/layouts/header";
 import About from "@/components/layouts/profile";
 import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
-import { ContactForm } from "@/components/layouts/contact";
+import Contact from "@/components/layouts/contact";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
@@ -79,7 +79,7 @@ export default function Home() {
           <Skills />
         </div>
         <div ref={scrollcontactRef}>
-          <ContactForm />
+          <Contact />
         </div>
         <div className='font-medium text-gray-500 transition-colors flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-whitedark:bg-gray-800 p-2'>
             &copy;2024 Tayu 

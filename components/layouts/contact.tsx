@@ -1,82 +1,96 @@
 "use client"
 
 import React from 'react'
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
 import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import { toast } from "@/components/ui/use-toast"
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Textarea } from '@/components/ui/textarea';
 
-const FormSchema = z.object({
-  bio: z
-    .string()
-    .min(10, {
-      message: "Bio must be at least 10 characters.",
-    })
-    .max(160, {
-      message: "Bio must not be longer than 30 characters.",
-    }),
+const formShema = z.object({
+    name: z.string().min(2, { message: "2文字以上で入力してください" }).max(10, { message: "10文字以下で入力してください" }),
+    email: z.string().email({ message: "メールアドレスの形式ではありません" }),
+    content: z.string().min(1, { message: "お問い合わせ内容は入力必須です。" })
 })
 
-export function ContactForm() {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
-  })
- 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+type formType = z.infer<typeof formShema>
+
+const Contact = () => {
+    const form = useForm<formType>({
+        resolver: zodResolver(formShema),
+        defaultValues: {
+            name: "",
+            email: "",
+            content: ""
+        }
     })
-  }
- 
-  return (
-    <div className='flex flex-col items-center justify-between p-20'>
-      <h3 className="text-2xl font-semibold text-center">Contact</h3>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <FormField
-            control={form.control}
-            name="bio"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Bio</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Tell us a little bit about yourself"
-                    className="resize-none"
-                    {...field}
-                    />
-                </FormControl>
-                <FormDescription>
-                  You can <span>@mention</span> other users and organizations.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-            />
-            <div className='flex flex-col items-center justify-between'>
-              <Button type="submit">Submit</Button>
-            </div>
-        </form>
-      </Form>
-    </div>
-  )
+
+    const onSubmit = (data: formType) => {
+        console.log(data)
+    }
+
+    return (
+			<div className='lg:w-[70%] w-full mx-auto'>
+					<h2 className='text-2xl font-semibold text-center mb-5'>Contact</h2>
+					<Form {...form}>
+							<form className='flex flex-col items-center justify-between space-y-10' onSubmit={form.handleSubmit(onSubmit)}>
+									<FormField
+											control={form.control}
+											name="name"
+											render={({ field }) => (
+													<FormItem>
+															<FormLabel>名前</FormLabel>
+															<FormControl>
+																	<Input placeholder="Tayu" {...field} />
+															</FormControl>
+															<FormDescription>お名前をお書きください。</FormDescription>
+															<FormMessage />
+													</FormItem>
+											)}
+									/>
+									<FormField
+											control={form.control}
+											name="email"
+											render={({ field }) => (
+													<FormItem>
+															<FormLabel>メールアドレス</FormLabel>
+															<FormControl>
+																	<Input placeholder="example@gmail.com" {...field} />
+															</FormControl>
+															<FormDescription>メールアドレスをお書きください。</FormDescription>
+															<FormMessage />
+													</FormItem>
+											)}
+									/>
+									<FormField
+											control={form.control}
+											name="content"
+											render={({ field }) => (
+													<FormItem>
+															<FormLabel>お問い合わせ内容</FormLabel>
+															<FormControl>
+																	<Textarea placeholder='こんにちは' {...field} className='resize-none h-[200px]'/>
+															</FormControl>
+															<FormDescription>お問い合わせ内容をお書きください。</FormDescription>
+															<FormMessage />
+													</FormItem>
+											)}
+									/>
+									<Button>送信</Button>
+							</form>
+					</Form>
+			</div>
+    )
 }
 
-// export default Contact;
+export default Contact
