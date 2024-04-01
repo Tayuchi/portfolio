@@ -40,8 +40,8 @@ const Contact = () => {
     }
 
     return (
-			<div className='lg:w-[70%] w-full mx-auto'>
-					<h2 className='text-2xl font-semibold text-center mb-5'>Contact</h2>
+		<div className='lg:w-[70%] w-full mx-auto mb-5'>
+				<h2 className='text-2xl font-semibold text-center mb-5'>Contact</h2>
 					<Form {...form}>
 							<form className='flex flex-col items-center justify-between space-y-10' onSubmit={form.handleSubmit(onSubmit)}>
 									<FormField
