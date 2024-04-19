@@ -18,8 +18,8 @@ import {
 const Works = () => {
   return (
 	<div className='flex flex-col items-center justify-between p-20'>
-		<h3 className="text-2xl font-semibold text-center mb-5">Works</h3>
-			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xs">
+	  <h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
+		<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xs">
 				<CarouselContent>
 					{Array.from({ length: 3 }).map((_, index) => (
 						<CarouselItem key={index}>

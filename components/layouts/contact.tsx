@@ -40,57 +40,61 @@ const Contact = () => {
     }
 
     return (
-		<div className='lg:w-[70%] w-full mx-auto mb-5'>
-				<h2 className='text-2xl font-semibold text-center mb-5'>Contact</h2>
-					<Form {...form}>
-							<form className='flex flex-col items-center justify-between space-y-10' onSubmit={form.handleSubmit(onSubmit)}>
-									<FormField
-											control={form.control}
-											name="name"
-											render={({ field }) => (
-													<FormItem>
-															<FormLabel>名前</FormLabel>
-															<FormControl>
-																	<Input placeholder="Tayu" {...field} />
-															</FormControl>
-															<FormDescription>お名前をお書きください。</FormDescription>
-															<FormMessage />
-													</FormItem>
-											)}
-									/>
-									<FormField
-											control={form.control}
-											name="email"
-											render={({ field }) => (
-													<FormItem>
-															<FormLabel>メールアドレス</FormLabel>
-															<FormControl>
-																	<Input placeholder="example@gmail.com" {...field} />
-															</FormControl>
-															<FormDescription>メールアドレスをお書きください。</FormDescription>
-															<FormMessage />
-													</FormItem>
-											)}
-									/>
-									<FormField
-											control={form.control}
-											name="content"
-											render={({ field }) => (
-													<FormItem>
-															<FormLabel>お問い合わせ内容</FormLabel>
-															<FormControl>
-																	<Textarea placeholder='こんにちは' {...field} className='resize-none h-[200px]'/>
-															</FormControl>
-															<FormDescription>お問い合わせ内容をお書きください。</FormDescription>
-															<FormMessage />
-													</FormItem>
-											)}
-									/>
-									<Button>送信</Button>
-							</form>
-					</Form>
-			</div>
-    )
+      <div className='container h-screen flex items-center'>
+        <div className='lg:w-[50%] w-full mx-auto'>
+          <h1 className="text-2xl font-semibold text-center mb-5">Contact</h1>
+            <Form {...form}>
+              <form className='space-y-8' onSubmit={form.handleSubmit(onSubmit)}>
+                  <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                          <FormItem>
+                              <FormLabel>Name</FormLabel>
+                              <FormControl>
+                                  <Input placeholder="Tayu" {...field} />
+                              </FormControl>
+                              <FormDescription>Your name</FormDescription>
+                              <FormMessage />
+                          </FormItem>
+                      )}
+                  />
+                  <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                          <FormItem>
+                              <FormLabel>Email</FormLabel>
+                              <FormControl>
+                                  <Input placeholder="example@example.com" {...field} />
+                              </FormControl>
+                              <FormDescription>Yourt email address</FormDescription>
+                              <FormMessage />
+                          </FormItem>
+                      )}
+                  />
+                  <FormField
+                      control={form.control}
+                      name="content"
+                      render={({ field }) => (
+                          <FormItem>
+                              <FormLabel>Message</FormLabel>
+                              <FormControl>
+                                  <Textarea placeholder='Hello, Tayu!' {...field} className='resize-none h-[200px]'/>
+                              </FormControl>
+                              <FormDescription>Your message content</FormDescription>
+                              <FormMessage />
+                          </FormItem>
+                      )}
+                  />
+                  <div className="text-center">
+                    <Button>Submit</Button>
+                  </div>
+              </form>
+            </Form>
+        </div>
+      </div>
+  )
 }
 
 export default Contact
