@@ -39,7 +39,7 @@ const Contact = () => {
 		console.log(data)
 	}
 
-	return (
+    return (
 		<div className='lg:w-[70%] w-full mx-auto mb-5'>
 				<h2 className='text-2xl font-semibold text-center mb-5'>Contact</h2>
 					<Form {...form}>
@@ -90,7 +90,7 @@ const Contact = () => {
 							</form>
 					</Form>
 			</div>
-	)
+    )
 }
 
 export default Contact
