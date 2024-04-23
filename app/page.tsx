@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useRef } from "react";
 import Header from "@/components/layouts/header";
-import About from "@/components/layouts/profile";
+import About from "@/components/layouts/About";
 import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
 import Contact from "@/components/layouts/contact";
