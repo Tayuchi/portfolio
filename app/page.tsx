@@ -9,6 +9,10 @@ import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
 import Contact from "@/components/layouts/contact";
 import { Separator } from "@/components/ui/separator";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const scrollaboutRef = useRef<HTMLDivElement>(null);
@@ -30,58 +34,74 @@ export default function Home() {
   return (
     <div>
       <main>
-      <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-10">
-        <div className="px-4 py-3 md:py-6 lg:px-6">
-          <div className="flex items-center space-y-2 md:space-y-0 md:space-x-6">
-            <Link href="/" className="text-2xl font-bold tracking-tighter mr-4">
-              Tayu
-            </Link>
-            <nav className="flex items-center space-x-6 text-sm">
-              <button
-                className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                onClick={() => scrollAbout()}
-              >
-                About
-              </button>
-              <Separator orientation='vertical'/>
-              <button
-                className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                onClick={() => scrollWorks()}
-              >
-                Works
-              </button>
-              <Separator orientation='vertical'/>
-              <button
-                className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                onClick={() => scrollSkills()}
-              >
-                Skills
-              </button>
-              <Separator orientation='vertical'/>
-              <button
-                className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                onClick={() => scrollContact()}
-              >
-                Contact
-              </button>
-            </nav>
+        <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-10">
+          <div className="px-4 py-3 md:py-6 lg:px-6">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-y-2 md:space-y-0 md:space-x-6">
+                <Link href="/" className="text-2xl font-bold tracking-tighter mr-4">
+                  Tayu
+                </Link>
+                <nav className="flex items-center space-x-6 text-sm">
+                  <button
+                    className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    onClick={() => scrollAbout()}
+                    >
+                    About
+                  </button>
+                  <Separator orientation='vertical'/>
+                  <button
+                    className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    onClick={() => scrollWorks()}
+                    >
+                    Works
+                  </button>
+                  <Separator orientation='vertical'/>
+                  <button
+                    className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    onClick={() => scrollSkills()}
+                    >
+                    Skills
+                  </button>
+                  <Separator orientation='vertical'/>
+                  <button
+                    className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    onClick={() => scrollContact()}
+                    >
+                    Contact
+                  </button>
+                </nav>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <a href="https://github.com/tayuchi" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a href="https://twitter.com/tayu_not_found" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100011572503985" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faFacebook} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div>
+          <Header />
+          <div ref={scrollaboutRef}>
+            <About />
+          </div>
+          <div ref={scrollworksRef}>
+            <Works />
+          </div>
+          <div ref={scrollskillsRef}>
+            <Skills />
+          </div>
+          <div ref={scrollcontactRef}>
+            <Contact />
           </div>
         </div>
-      </nav>
-        <Header />
-        <div ref={scrollaboutRef}>
-          <About />
-        </div>
-        <div ref={scrollworksRef}>
-          <Works />
-        </div>
-        <div ref={scrollskillsRef}>
-          <Skills />
-        </div>
-        <div ref={scrollcontactRef}>
-          <Contact />
-        </div>
-        <div className='font-medium text-gray-500 transition-colors flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-whitedark:bg-gray-800 p-2'>
+        <div className='font-small text-gray-500 transition-colors flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-whitedark:bg-gray-800 p-2'>
             &copy;2024 Tayu 
         </div>
       </main>

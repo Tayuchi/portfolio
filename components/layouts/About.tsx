@@ -18,7 +18,6 @@ const About = () => {
         <div className="mt-4 md:mt-0 md:ml-6">
           <p className="text-base">
             名前：Tayu<br />
-            2001年1月20日生 東京都出身<br />
             趣味:プログラミング、麻雀、映画鑑賞、英語学習<br />
           </p>
         </div>
