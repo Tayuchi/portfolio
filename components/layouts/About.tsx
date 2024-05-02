@@ -12,7 +12,7 @@ const About = () => {
             alt="profile"
             width={200}
             height={200}
-            className="shadow-lg rounded-full max-w-full h-auto align-middle border-none"
+            className="rounded-full max-w-full h-auto align-middle border-none"
           />
         </div>
         <div className="mt-4 md:mt-0 md:ml-6">
