@@ -23,7 +23,7 @@ const About = () => {
         className="flip-card-inner cursor-pointer" 
         initial={false} 
         animate={{ rotateY: isFlipped ? 180 : 360}}
-        transition={{ duration: 0.3, animationDirection: "normal" }}
+        transition={{ duration: 0.5, animationDirection: "normal" }}
         onAnimationComplete={() => setIsAnimating(false)}
       >
         <Image
