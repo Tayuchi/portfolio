@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-// import { Html5 } from 'devicon-react-svg'
  
 const Skills = () => {
   return (
