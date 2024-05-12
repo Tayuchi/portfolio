@@ -17,15 +17,15 @@ import {
 
 const Works = () => {
   return (
-		<div className='flex flex-col items-center justify-between p-20'>
+		<div className='flex flex-col items-center justify-between mt-40 p-20'>
 			<h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
-			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xs">
+			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xl card">
 				<CarouselContent>
 					{Array.from({ length: 3 }).map((_, index) => (
 						<CarouselItem key={index}>
-							<div className="p-1">
-								<Card>
-									<CardContent className="flex aspect-square items-center justify-center p-6">
+							<div>
+								<Card className='card'>
+									<CardContent className="flex aspect-square items-center justify-center">
 										<span className="text-4xl font-semibold">{index + 1}</span>
 									</CardContent>
 								</Card>

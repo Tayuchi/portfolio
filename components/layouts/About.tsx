@@ -1,27 +1,55 @@
-import React from 'react'
-import Image from 'next/image'
+'use client'
+
+import Image from "next/image"
+import { useState } from "react"
+import { motion } from "framer-motion"
 
 const About = () => {
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  function handleFip() {
+    if (!isAnimating) {
+      setIsAnimating(true)
+      setIsFlipped(!isFlipped)
+    }
+  }
+
   return (
-    <div className='flex flex-col items-center justify-between p-20'>
-      <h1 className="text-2xl font-semibold text-center mb-5">About me</h1>
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="flex-shrink-0">
-          <Image
-            src="/profile.jpeg"
-            alt="profile"
-            width={200}
-            height={200}
-            className="rounded-full max-w-full h-auto align-middle border-none"
-          />
+    <div className='flex flex-col items-center justify-between mt-40'>
+      <motion.div 
+        className="flip-card-inner cursor-pointer" 
+        initial={false} 
+        animate={{ rotateY: isFlipped ? 180 : 360}}
+        transition={{ duration: 0.3, animationDirection: "normal" }}
+        onAnimationComplete={() => setIsAnimating(false)}
+      >
+        <Image
+          src="/header.png"
+          alt="Tayu's header image"
+          width={600}
+          height={400}
+          className="flip-card-front card rounded-md object-cover mt-5"
+          onClick={handleFip}
+        />
+        <div onClick={handleFip} className="flip-card-back card rounded-md object-cover mt-5 flex flex-col items-center justify-between p-20">
+          <h1 className="text-2xl font-semibold text-center">Hi, there</h1>
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="flex-shrink-0">
+              <Image
+                src="/profile.jpeg"
+                alt="profile"
+                width={200}
+                height={200}
+                className="rounded-full max-w-full h-auto align-middle border-none"
+              />
+            </div>
+            <div className="mt-4 md:mt-0 md:ml-6">
+              <p className="text-center">A college student, as well as a web developer based in Japan.</p>
+            </div>
+          </div>
         </div>
-        <div className="mt-4 md:mt-0 md:ml-6">
-          <p className="text-base">
-            名前：Tayu<br />
-            趣味:プログラミング、麻雀、映画鑑賞、英語学習<br />
-          </p>
-        </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

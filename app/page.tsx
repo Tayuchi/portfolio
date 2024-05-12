@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRef } from "react";
-import Header from "@/components/layouts/header";
-import About from "@/components/layouts/About";
+import About from "@/components/layouts/about";
 import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
 import Contact from "@/components/layouts/contact";
@@ -15,13 +14,9 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
-  const scrollaboutRef = useRef<HTMLDivElement>(null);
   const scrollworksRef = useRef<HTMLDivElement>(null);
   const scrollskillsRef = useRef<HTMLDivElement>(null);
   const scrollcontactRef = useRef<HTMLDivElement>(null);
-  const scrollAbout = () => {
-    scrollaboutRef.current?.scrollIntoView({ behavior: "smooth" });
-  }
   const scrollWorks = () => {
     scrollworksRef.current?.scrollIntoView({ behavior: "smooth" });
   }
@@ -34,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-10">
+        <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-20 card">
           <div className="px-4 py-3 md:py-6 lg:px-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-y-2 md:space-y-0 md:space-x-6">
@@ -42,10 +37,10 @@ export default function Home() {
                   Tayu
                 </Link>
                 <nav className="flex items-center space-x-6 text-sm">
-                  <button
-                    className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                    onClick={() => scrollAbout()}
-                    >
+                  <button 
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  >
                     About
                   </button>
                   <Separator orientation='vertical'/>
@@ -87,8 +82,7 @@ export default function Home() {
           </div>
         </nav>
         <div>
-          <Header />
-          <div ref={scrollaboutRef}>
+          <div>
             <About />
           </div>
           <div ref={scrollworksRef}>
