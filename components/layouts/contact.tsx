@@ -41,11 +41,11 @@ const Contact = () => {
 	}
 
 	return (
-		<div className='lg:w-[60%] mx-auto mb-20'>
+		<div className='lg:w-[30%] md:w-[60%] sm:w-[80%] mx-auto mb-20'>
 			<h1 className='text-2xl font-semibold text-center mb-5'>Contact</h1>
-			<Card className='card w-[60%] mx-auto flex pt-10 pb-10'>
+			<Card className='card mx-auto flex pt-10 pb-10'>
 				<Form {...form}>
-					<form className='w-[80%] mx-auto flex flex-col justify-between space-y-5' onSubmit={form.handleSubmit(onSubmit)}>
+					<form className='w-[90%] mx-auto flex flex-col justify-between space-y-5' onSubmit={form.handleSubmit(onSubmit)}>
 						<FormField
 							control={form.control}
 							name="name"
@@ -55,7 +55,6 @@ const Contact = () => {
 										<FormControl>
 											<Input placeholder="Tayu" {...field} />
 										</FormControl>
-										<FormDescription></FormDescription>
 										<FormMessage />
 								</FormItem>
 							)}
@@ -69,7 +68,6 @@ const Contact = () => {
 										<FormControl>
 												<Input placeholder="example@gmail.com" {...field} />
 										</FormControl>
-										<FormDescription></FormDescription>
 										<FormMessage />
 								</FormItem>
 							)}
@@ -81,9 +79,8 @@ const Contact = () => {
 								<FormItem>
 										<FormLabel>Message</FormLabel>
 										<FormControl>
-												<Textarea placeholder='Hello' {...field} className='resize-none h-[300px]'/>
+											<Textarea placeholder='Hello' {...field} className='resize-none h-[300px]'/>
 										</FormControl>
-										<FormDescription></FormDescription>
 										<FormMessage />
 								</FormItem>
 							)}
