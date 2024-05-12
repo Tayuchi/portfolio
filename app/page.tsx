@@ -12,7 +12,7 @@ import { Separator } from "@/components/ui/separator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const scrollaboutRef = useRef<HTMLDivElement>(null);
@@ -79,8 +79,8 @@ export default function Home() {
                 <a href="https://twitter.com/tayu_not_found" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
                   <FontAwesomeIcon icon={faXTwitter} />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100011572503985" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
-                  <FontAwesomeIcon icon={faFacebook} />
+                <a href="https://www.linkedin.com/feed/?trk=snapple" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </div>
             </div>
