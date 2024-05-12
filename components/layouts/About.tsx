@@ -3,6 +3,8 @@
 import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 
 const About = () => {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -44,8 +46,21 @@ const About = () => {
                 className="rounded-full max-w-full h-auto align-middle border-none"
               />
             </div>
-            <div className="mt-4 md:mt-0 md:ml-6">
-              <p className="text-center">A college student, as well as a web developer based in Japan.</p>
+            <div className="flex flex-col items-center space-y-5">
+              <div className="mt-4 md:mt-0 md:ml-6">
+                <p className="text-center">A college student, as well as a web developer based in Japan.</p>
+              </div>
+              <div className="flex items-center space-x-4">
+                <a href="https://github.com/tayuchi" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a href="https://twitter.com/tayu_not_found" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
+                <a href="https://www.linkedin.com/feed/?trk=snapple" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-20 card">
+        <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-10 card">
           <div className="px-4 py-3 md:py-6 lg:px-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-y-2 md:space-y-0 md:space-x-6">
@@ -65,18 +65,6 @@ export default function Home() {
                     Contact
                   </button>
                 </nav>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <a href="https://github.com/tayuchi" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://twitter.com/tayu_not_found" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
-                  <FontAwesomeIcon icon={faXTwitter} />
-                </a>
-                <a href="https://www.linkedin.com/feed/?trk=snapple" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
               </div>
             </div>
           </div>
