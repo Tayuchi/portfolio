@@ -55,7 +55,6 @@ const Contact = () => {
 				toast.success("Successfully sent a message")
 			}
 			catch (error) {
-				console.log("failed to send a message")
 				toast.error("failed to send a message")
 			}
 			finally {
