@@ -10,18 +10,19 @@ import {
 	FormLabel,
 	FormMessage,
 } from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '../ui/card';
+import emailjs, { init, send } from '@emailjs/browser'
 
 const formShema = z.object({
 	name: z.string().min(2, { message: "At least 2 letters are required" }).max(29, { message: "Letters must be under 30" }),
 	email: z.string().email({ message: "Invalid email address" }),
-	content: z.string().min(1, { message: "Message is necessary" })
+	message: z.string().min(1, { message: "Message is necessary" })
 })
 
 type formType = z.infer<typeof formShema>
@@ -32,12 +33,32 @@ const Contact = () => {
 		defaultValues: {
 			name: "",
 			email: "",
-			content: ""
+			message: ""
 		}
 	})
 
-	const onSubmit = (data: formType) => {
-		console.log(data)
+  const onSubmit: SubmitHandler<formType> = async(data: formType) => {
+		const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+		const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+		const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+		const { name, email, message } = data
+		if (userId && serviceId && templateId) {
+			try {
+				init(userId)
+				const params = {
+						name: name,
+						email: email,
+						message: message
+				}
+				await send(serviceId, templateId, params)
+			}
+			catch (error) {
+				console.log("メッセージの送信に失敗しました。")
+			}
+			finally {
+				form.reset()
+			}
+		}
 	}
 
 	return (
@@ -74,7 +95,7 @@ const Contact = () => {
 							/>
 						<FormField
 							control={form.control}
-							name="content"
+							name="message"
 							render={({ field }) => (
 								<FormItem>
 										<FormLabel>Message</FormLabel>
