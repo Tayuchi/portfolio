@@ -18,6 +18,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '../ui/card';
 import emailjs, { init, send } from '@emailjs/browser'
+import toast, { Toaster } from 'react-hot-toast'
 
 const formShema = z.object({
 	name: z.string().min(2, { message: "At least 2 letters are required" }).max(29, { message: "Letters must be under 30" }),
@@ -51,9 +52,11 @@ const Contact = () => {
 						message: message
 				}
 				await send(serviceId, templateId, params)
+				toast.success("Successfully sent a message")
 			}
 			catch (error) {
-				console.log("メッセージの送信に失敗しました。")
+				console.log("failed to send a message")
+				toast.error("failed to send a message")
 			}
 			finally {
 				form.reset()
