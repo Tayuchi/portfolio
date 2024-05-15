@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRef } from "react";
-import AboutCard from "@/components/layouts/about";
+import About from "@/components/layouts/about";
 import Works from "@/components/layouts/works";
 import Skills from "@/components/layouts/skills";
 import Contact from "@/components/layouts/contact";
@@ -71,7 +71,7 @@ export default function Home() {
         </nav>
         <div>
           <div ref={scrollaboutRef}>
-            <AboutCard />
+            <About />
           </div>
           <div ref={scrollworksRef}>
             <Works />
