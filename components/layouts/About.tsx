@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 
-const About = () => {
+const AboutCard = () => {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
 
@@ -69,4 +69,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default AboutCard;
