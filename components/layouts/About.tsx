@@ -10,7 +10,7 @@ const AboutCard = () => {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  function handleFip() {
+  function handleFlip() {
     if (!isAnimating) {
       setIsAnimating(true)
       setIsFlipped(!isFlipped)
@@ -32,9 +32,9 @@ const AboutCard = () => {
           width={600}
           height={400}
           className="flip-card-front card rounded-md object-cover mt-5"
-          onClick={handleFip}
+          onClick={handleFlip}
         />
-        <div onClick={handleFip} className="flip-card-back card rounded-md object-cover mt-5 flex flex-col items-center justify-between p-20">
+        <div onClick={handleFlip} className="flip-card-back card rounded-md object-cover mt-5 flex flex-col items-center justify-between p-20">
           <h1 className="text-2xl font-semibold text-center">Hi, there</h1>
           <div className="flex flex-col md:flex-row items-center">
             <div className="flex-shrink-0">
