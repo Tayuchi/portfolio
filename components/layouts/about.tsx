@@ -18,7 +18,7 @@ const About = () => {
   }
 
   return (
-    <div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto flex flex-col items-center justify-between mt-40'>
+    <div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto flex flex-col items-center justify-between'>
       <h1 className="text-2xl font-semibold text-center">Flip it!</h1>
       <motion.div 
         className="flip-card-inner cursor-pointer" 
