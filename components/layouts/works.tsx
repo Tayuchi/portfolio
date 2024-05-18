@@ -20,7 +20,7 @@ const Works = () => {
   return (
 		<div className='flex flex-col items-center justify-between mt-20 p-20'>
 			<h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
-			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xl p-10">
+			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xl">
 				<CarouselContent>
 						<CarouselItem className='w-full'>
 							<div>
