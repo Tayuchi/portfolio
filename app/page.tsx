@@ -28,7 +28,7 @@ export default function Home() {
   }
   return (
     <div>
-      <main>
+      <main className="flex flex-col mx-auto justify-between">
         <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-10 card">
           <div className="px-4 py-3 md:py-6 lg:px-6">
             <div className="flex justify-between items-center">
@@ -43,21 +43,21 @@ export default function Home() {
                   >
                     About
                   </button>
-                  <Separator orientation='vertical'/>
+                  <Separator orientation='vertical' className="hidden sm:block"/>
                   <button
                     className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     onClick={() => scrollWorks()}
                     >
                     Works
                   </button>
-                  <Separator orientation='vertical'/>
+                  <Separator orientation='vertical' className="hidden sm:block"/>
                   <button
                     className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     onClick={() => scrollSkills()}
                     >
                     Skills
                   </button>
-                  <Separator orientation='vertical'/>
+                  <Separator orientation='vertical' className="hidden sm:block"/>
                   <button
                     className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     onClick={() => scrollContact()}
@@ -69,7 +69,7 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div>
+        <div className="mt-16 sm:mt-30 space-y-24 p-3">
           <div ref={scrollaboutRef}>
             <About />
           </div>
@@ -83,8 +83,8 @@ export default function Home() {
             <Contact />
           </div>
         </div>
-        <div className='font-small text-gray-500 transition-colors flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-whitedark:bg-gray-800 p-2'>
-            &copy;2024 Tayu 
+        <div className='font-small text-gray-500 transition-colors flex flex-col items-center justify-between border-gray-200 dark:border-gray-800 border-t w-full bg-white dark:bg-gray-800 p-2'>
+          &copy;2024 Tayu 
         </div>
       </main>
     </div>

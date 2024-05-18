@@ -18,7 +18,8 @@ const About = () => {
   }
 
   return (
-    <div className='flex flex-col items-center justify-between mt-40'>
+    <div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto flex flex-col items-center justify-between mt-20'>
+      <h1 className="text-2xl font-semibold text-center">About me</h1>
       <motion.div 
         className="flip-card-inner cursor-pointer" 
         initial={false} 
@@ -29,7 +30,7 @@ const About = () => {
         <Image
           src="/header.png"
           alt="Tayu's header image"
-          width={600}
+          width={500}
           height={400}
           className="flip-card-front card rounded-md object-cover mt-5"
           onClick={handleFlip}
@@ -48,7 +49,8 @@ const About = () => {
             </div>
             <div className="flex flex-col items-center space-y-5">
               <div className="mt-4 md:mt-0 md:ml-6">
-                <p className="text-center">A college student, as well as a web developer based in Japan.</p>
+                <p className="text-center">I&apos;m Tayu, a college student and web developer based in Japan.</p>
+                <p className="text-center mt-3">Born in Jan 20, 2001, in Tokyo</p>
               </div>
               <div className="flex items-center space-x-4">
                 <a href="https://github.com/tayuchi" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
