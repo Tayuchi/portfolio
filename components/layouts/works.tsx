@@ -118,7 +118,7 @@ const Works = () => {
 										</CardContent>
 										<div>
 											<CardContent>
-												<p>Google Street Viewの画像と同じ写真を現地で取り、2枚の画像の類似度でスコアを出すゲームアプリ。技育博にて出展。企業賞(DeNA, ゆめみ)受賞。</p>
+												<p>概要：Google Street Viewの画像と同じ写真を現地で取り、2枚の画像の類似度でスコアを出すゲームアプリ。技育博にて出展。企業賞(DeNA, ゆめみ)受賞。</p>
 											</CardContent>
 											<CardContent>
 												<p>制作期間：1ヶ月</p>

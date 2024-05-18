@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <div className='flex flex-col items-center justify-between mt-40'>
-      <h1 className="text-2xl font-semibold text-center"></h1>
+      <h1 className="text-2xl font-semibold text-center">Flip it!</h1>
       <motion.div 
         className="flip-card-inner cursor-pointer" 
         initial={false} 
