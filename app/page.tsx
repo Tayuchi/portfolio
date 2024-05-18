@@ -69,17 +69,17 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div className="mt-16 sm:mt-24">
-          <div ref={scrollaboutRef} className="p-4 sm:p-8">
+        <div className="mt-16 sm:mt-24 space-y-20">
+          <div ref={scrollaboutRef}>
             <About />
           </div>
-          <div ref={scrollworksRef} className="p-4 sm:p-8">
+          <div ref={scrollworksRef}>
             <Works />
           </div>
-          <div ref={scrollskillsRef} className="p-4 sm:p-8">
+          <div ref={scrollskillsRef}>
             <Skills />
           </div>
-          <div ref={scrollcontactRef} className="p-4 sm:p-8">
+          <div ref={scrollcontactRef}>
             <Contact />
           </div>
         </div>

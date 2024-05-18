@@ -4,7 +4,7 @@ import { Card, CardContent, CardTitle } from '../ui/card';
  
 const Skills = () => {
   return (
-    <div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto mb-20'>
+    <div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto'>
       <h1 className="text-2xl font-semibold text-center mb-5">Skills</h1>
       <Card className='card mx-auto flex flex-col items-center pt-10 space-y-5 pb-5'>
         <CardTitle >Tech Stack</CardTitle>

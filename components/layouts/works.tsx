@@ -21,7 +21,7 @@ import Autoplay from "embla-carousel-autoplay"
 const Works = () => {
 	const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: false}))
   return (
-    <div className='w-full max-w-lg mx-auto flex flex-col items-center justify-between p-4 sm:p-8'>
+    <div className='w-full max-w-lg mx-auto flex flex-col items-center justify-between'>
       <h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
       <Card className='card h-[650px]'>
         <Carousel 
