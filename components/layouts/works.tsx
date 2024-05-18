@@ -16,15 +16,25 @@ import {
     CardTitle,
   } from "@/components/ui/card";
 
+	import Autoplay from "embla-carousel-autoplay"
+
 const Works = () => {
+	const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: false}))
   return (
 		<div className='flex flex-col items-center justify-between mt-20 p-20'>
 			<h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
-			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xl">
+			<Card className='card'>
+			<Carousel 
+				opts={{ align:"start", loop:true, }} 
+				plugins={[plugin.current]}
+				onMouseEnter={plugin.current.stop}
+				onMouseLeave={plugin.current.reset}
+				className="w-full max-w-xl h-[570px] mx-auto relative"
+				>
 				<CarouselContent>
 						<CarouselItem className='w-full'>
 							<div>
-								<Card className='card flex flex-col aspect-square items-center justify-center p-10'>
+								<Card className='flex flex-col aspect-square items-center justify-center'>
 									<CardContent>
 										<CardTitle>夢ニキ Yumenki</CardTitle>
 									</CardContent>
@@ -59,7 +69,7 @@ const Works = () => {
 						</CarouselItem>
 						<CarouselItem>
 							<div>
-								<Card className='card flex flex-col aspect-square items-center justify-center p-10'>
+								<Card className='flex flex-col aspect-square items-center justify-center'>
 									<CardContent>
 										<CardTitle>Parrotter</CardTitle>
 									</CardContent>
@@ -73,7 +83,7 @@ const Works = () => {
 									</CardContent>
 									<div>
 										<CardContent>
-											<p>投稿した内容（画像を含む）をAIが再生成し、適切な表現に直してくれる「炎上しないSNS」。2024年 技育CAMP vol.2で作成。努力賞受賞。</p>
+											<p>概要：投稿した内容（画像とテキスト）をAIが再生成し、適切な表現に直してくれる「炎上しないSNS」。2024年 技育CAMP vol.2で作成。努力賞受賞。</p>
 										</CardContent>
 										<CardContent>
 											<p>制作期間：1週間</p>
@@ -94,7 +104,7 @@ const Works = () => {
 						</CarouselItem>
 						<CarouselItem>
 							<div>
-								<Card className='card flex flex-col aspect-square items-center justify-center m-5 p-5'>
+								<Card className='flex flex-col aspect-square items-center justify-center'>
 									<CardContent>
 										<CardTitle>Photo Pickle</CardTitle>
 									</CardContent>
@@ -129,7 +139,7 @@ const Works = () => {
 						</CarouselItem>
 						<CarouselItem>
 							<div>
-								<Card className='card flex flex-col aspect-square items-center justify-center p-10'>
+								<Card className='postion-absolute flex flex-col aspect-square items-center justify-center'>
 									<CardContent>
 										<CardTitle>Portfolio Site</CardTitle>
 									</CardContent>
@@ -173,6 +183,7 @@ const Works = () => {
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
+											</Card>
 		</div>
   )
 }

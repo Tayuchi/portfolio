@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@egjs/flicking-plugins": "^4.7.1",
     "@emailjs/browser": "^4.3.3",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -28,6 +29,7 @@
     "devicon": "^2.16.0",
     "devicon-react": "^1.1.0",
     "devicon-react-svg": "^0.2.4",
+    "embla-carousel-autoplay": "^8.1.1",
     "embla-carousel-react": "^8.0.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.1.9",
