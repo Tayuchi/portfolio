@@ -21,7 +21,7 @@ import {
 const Works = () => {
 	const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: false}))
   return (
-		<div className='flex flex-col items-center justify-between mt-20 p-20'>
+		<div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto flex flex-col items-center justify-between mt-20 p-20'>
 			<h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
 			<Card className='card'>
 				<Carousel 
@@ -29,7 +29,7 @@ const Works = () => {
 					plugins={[plugin.current]}
 					onMouseEnter={plugin.current.stop}
 					onMouseLeave={plugin.current.reset}
-					className="w-full max-w-xl h-[600px] mx-auto relative"
+					className="h-[700px] w-full max-w-xl mx-auto relative p-10"
 					>
 					<CarouselContent>
 							<CarouselItem className='w-full'>
@@ -52,6 +52,9 @@ const Works = () => {
 											</CardContent>
 											<CardContent>
 												<p>制作期間：1週間</p>
+											</CardContent>
+											<CardContent>
+												<p>開発人数：2人</p>
 											</CardContent>
 											<CardContent>
 												<p>使用技術：Next.js, NextAuth, Django, Docker, Chat-GPT4</p>
@@ -89,6 +92,9 @@ const Works = () => {
 												<p>制作期間：1週間</p>
 											</CardContent>
 											<CardContent>
+												<p>開発人数：4人</p>
+											</CardContent>
+											<CardContent>
 												<p>使用技術：Next.js, MUI, Firebase, Chat-GPT4</p>
 											</CardContent>
 											<CardContent>
@@ -124,6 +130,9 @@ const Works = () => {
 												<p>制作期間：1ヶ月</p>
 											</CardContent>
 											<CardContent>
+												<p>開発人数：4人</p>
+											</CardContent>
+											<CardContent>
 												<p>使用技術：Next.js, MUI, NextAuth, Prisma, Supabase, GCP, Vercel</p>
 											</CardContent>
 											<CardContent>
@@ -157,6 +166,9 @@ const Works = () => {
 											</CardContent>
 											<CardContent>
 												<p>制作期間：1ヶ月</p>
+											</CardContent>
+											<CardContent>
+												<p>開発人数：1人</p>
 											</CardContent>
 											<CardContent>
 												<p>使用技術：Next.js, shadcn/ui, framer-motion, emailjs, Vercel</p>

@@ -64,7 +64,7 @@ const Contact = () => {
 	}
 
 	return (
-		<div className='lg:w-[30%] md:w-[60%] sm:w-[80%] mx-auto mb-20'>
+		<div className='lg:w-[40%] md:w-[80%] sm:w-[80%] mx-auto mb-20'>
 			<h1 className='text-2xl font-semibold text-center mb-5'>Contact</h1>
 			<Card className='card mx-auto flex pt-10 pb-10'>
 				<Form {...form}>
