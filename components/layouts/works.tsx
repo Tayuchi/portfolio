@@ -20,7 +20,7 @@ const Works = () => {
   return (
 		<div className='flex flex-col items-center justify-between mt-20 p-20'>
 			<h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
-			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xl">
+			<Carousel opts={{ align:"start", loop:true, }} className="w-full max-w-xl p-10">
 				<CarouselContent>
 						<CarouselItem className='w-full'>
 							<div>
@@ -47,7 +47,7 @@ const Works = () => {
 											<p>使用技術：Next.js, NextAuth, Django, Chat-GPT4</p>
 										</CardContent>
 										<CardContent>
-											<p>Link：
+											<p>Code：
 												<a href="https://github.com/5skip/yumeniki" target="_blank" rel="noopener noreferrer">
 													https://github.com/5skip/yumeniki
 												</a>
@@ -82,7 +82,7 @@ const Works = () => {
 											<p>使用技術：Next.js, MUI, Firebase, Chat-GPT4</p>
 										</CardContent>
 										<CardContent>
-											<p>Link：
+											<p>Code：
 												<a href="https://github.com/Tayuchi/TESNS" target="_blank" rel="noopener noreferrer">
 													https://github.com/Tayuchi/TESNS
 												</a>
@@ -94,14 +94,14 @@ const Works = () => {
 						</CarouselItem>
 						<CarouselItem>
 							<div>
-								<Card className='card flex flex-col aspect-square items-center justify-center p-10'>
+								<Card className='card flex flex-col aspect-square items-center justify-center m-5 p-5'>
 									<CardContent>
 										<CardTitle>Photo Pickle</CardTitle>
 									</CardContent>
 									<CardContent>
 										<Image 
 											src="/works/photopickle.png"
-											width={200}
+											width={150}
 											height={500}
 											alt='photo-pickle'
 											/>
@@ -117,7 +117,7 @@ const Works = () => {
 											<p>使用技術：Next.js, MUI, NextAuth, Prisma, Supabase, GCP, Vercel</p>
 										</CardContent>
 										<CardContent>
-											<p>Link：
+											<p>Code：
 												<a href="https://github.com/Kabuto0421/PhotoPickle" target="_blank" rel="noopener noreferrer">
 													https://github.com/Kabuto0421/PhotoPickle
 												</a>
@@ -149,12 +149,19 @@ const Works = () => {
 											<p>制作期間：1ヶ月</p>
 										</CardContent>
 										<CardContent>
-											<p>使用技術：Next.js, shadcn/ui, framer-motion, Vercel</p>
+											<p>使用技術：Next.js, shadcn/ui, framer-motion, emailjs, Vercel</p>
+										</CardContent>
+										<CardContent>
+											<p>Code：
+												<a href="https://github.com/Tayuchi/portfolio" target="_blank" rel="noopener noreferrer">
+													https://github.com/Tayuchi/portfolio
+												</a>
+											</p>
 										</CardContent>
 										<CardContent>
 											<p>Link：
-												<a href="https://github.com/Tayuchi/portfolio" target="_blank" rel="noopener noreferrer">
-													https://github.com/Tayuchi/portfolio
+												<a href="https://portfolio-72weoviql-tayuchis-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
+													https://portfolio-72weoviql-tayuchis-projects.vercel.app/
 												</a>
 											</p>
 										</CardContent>
