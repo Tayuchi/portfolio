@@ -28,7 +28,7 @@ export default function Home() {
   }
   return (
     <div>
-      <main>
+      <main className="mx-auto">
         <nav className="divide-y border-gray-200 dark:border-gray-800 border-b fixed w-full top-0 bg-white dark:bg-gray-800 z-10 card">
           <div className="px-4 py-3 md:py-6 lg:px-6">
             <div className="flex justify-between items-center">

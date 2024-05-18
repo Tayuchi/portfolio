@@ -29,7 +29,7 @@ const Works = () => {
 					plugins={[plugin.current]}
 					onMouseEnter={plugin.current.stop}
 					onMouseLeave={plugin.current.reset}
-					className="h-[700px] w-full max-w-xl mx-auto relative p-10"
+					className="h-[650px] w-full max-w-xl mx-auto relative p-10"
 					>
 					<CarouselContent>
 							<CarouselItem className='w-full'>

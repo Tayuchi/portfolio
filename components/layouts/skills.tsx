@@ -20,7 +20,7 @@ const Skills = () => {
           <Image src='/skills/icons8-css-144.png' width={50} height={300} alt='css' />
           <Image src='/skills/icons8-css-144.png' width={50} height={300} alt='css' />
         </CardContent>
-        <CardTitle>Qualifications</CardTitle>
+        <CardTitle>Licenses</CardTitle>
         <CardContent className='space-y-5'>
           <p>実用英語技能検定1級 (2021, Nov)</p>
           <p>TOEIC L&R score 935 (2022, Feb)</p>
