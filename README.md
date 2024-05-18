@@ -1,3 +1,3 @@
 # Tayu's portfolio site
 
-https://portfolio-72weoviql-tayuchis-projects.vercel.app
+https://portfolio-rouge-phi-18.vercel.app/
