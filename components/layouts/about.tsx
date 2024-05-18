@@ -30,7 +30,7 @@ const About = () => {
         <Image
           src="/header.png"
           alt="Tayu's header image"
-          width={600}
+          width={500}
           height={400}
           className="flip-card-front card rounded-md object-cover mt-5"
           onClick={handleFlip}
