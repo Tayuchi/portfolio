@@ -9,14 +9,15 @@ const Skills = () => {
       <Card className='card mx-auto flex flex-col items-center pt-10 space-y-5 pb-5'>
         <CardTitle >Tech Stack</CardTitle>
         <CardContent>
+
           
         </CardContent>
         <CardTitle>Qualifications</CardTitle>
         <CardContent className='space-y-5'>
-          <p>TOEIC L&R score 935</p>
-          <p>実用英語技能検定1級</p>
-          <p>ITパスポート</p>
-          <p>基本情報技術者試験</p>
+          <p>実用英語技能検定1級 (2021, Nov)</p>
+          <p>TOEIC L&R score 935 (2022, Feb)</p>
+          <p>ITパスポート (2021, Jun)</p>
+          <p>基本情報技術者試験 (2023, Nov)</p>
         </CardContent>
       </Card>
     </div>

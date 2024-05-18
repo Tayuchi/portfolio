@@ -36,7 +36,7 @@ const Works = () => {
 								<div>
 									<div className='flex flex-col aspect-square items-center justify-center'>
 										<CardContent>
-											<CardTitle>夢ニキ Yumenki</CardTitle>
+											<CardTitle>夢日記診断アプリ：夢ニキ Yumeniki</CardTitle>
 										</CardContent>
 										<CardContent>
 											<Image 
@@ -54,7 +54,7 @@ const Works = () => {
 												<p>制作期間：1週間</p>
 											</CardContent>
 											<CardContent>
-												<p>使用技術：Next.js, NextAuth, Django, Chat-GPT4</p>
+												<p>使用技術：Next.js, NextAuth, Django, Docker, Chat-GPT4</p>
 											</CardContent>
 											<CardContent>
 												<p>Code：
@@ -153,7 +153,7 @@ const Works = () => {
 										</CardContent>
 										<div>
 											<CardContent>
-												<p>概要：当ポートフォリオサイトです。</p>
+												<p>概要：当ポートフォリオサイト。</p>
 											</CardContent>
 											<CardContent>
 												<p>制作期間：1ヶ月</p>
