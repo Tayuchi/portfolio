@@ -24,166 +24,166 @@ const Works = () => {
 		<div className='flex flex-col items-center justify-between mt-20 p-20'>
 			<h1 className="text-2xl font-semibold text-center mb-5">Works</h1>
 			<Card className='card'>
-			<Carousel 
-				opts={{ align:"start", loop:true, }} 
-				plugins={[plugin.current]}
-				onMouseEnter={plugin.current.stop}
-				onMouseLeave={plugin.current.reset}
-				className="w-full max-w-xl h-[570px] mx-auto relative"
-				>
-				<CarouselContent>
-						<CarouselItem className='w-full'>
-							<div>
-								<Card className='flex flex-col aspect-square items-center justify-center'>
-									<CardContent>
-										<CardTitle>夢ニキ Yumenki</CardTitle>
-									</CardContent>
-									<CardContent>
-										<Image 
-											src="/works/yumeniki.png"
-											width={500}
-											height={500}
-											alt='yumeniki'
-											/>
-									</CardContent>
-									<div>
+				<Carousel 
+					opts={{ align:"start", loop:true, }} 
+					plugins={[plugin.current]}
+					onMouseEnter={plugin.current.stop}
+					onMouseLeave={plugin.current.reset}
+					className="w-full max-w-xl h-[600px] mx-auto relative"
+					>
+					<CarouselContent>
+							<CarouselItem className='w-full'>
+								<div>
+									<div className='flex flex-col aspect-square items-center justify-center'>
 										<CardContent>
-											<p>概要：昨日見た夢をAIに診断してもらう夢日記アプリ。2024年 技育CAMP vol.2で作成。</p>
+											<CardTitle>夢ニキ Yumenki</CardTitle>
 										</CardContent>
 										<CardContent>
-											<p>制作期間：1週間</p>
+											<Image 
+												src="/works/yumeniki.png"
+												width={400}
+												height={500}
+												alt='yumeniki'
+												/>
 										</CardContent>
-										<CardContent>
-											<p>使用技術：Next.js, NextAuth, Django, Chat-GPT4</p>
-										</CardContent>
-										<CardContent>
-											<p>Code：
-												<a href="https://github.com/5skip/yumeniki" target="_blank" rel="noopener noreferrer">
-													https://github.com/5skip/yumeniki
-												</a>
-											</p>
-										</CardContent>
+										<div>
+											<CardContent>
+												<p>概要：昨日見た夢をAIに診断してもらう夢日記アプリ。2024年 技育CAMP vol.2で作成。</p>
+											</CardContent>
+											<CardContent>
+												<p>制作期間：1週間</p>
+											</CardContent>
+											<CardContent>
+												<p>使用技術：Next.js, NextAuth, Django, Chat-GPT4</p>
+											</CardContent>
+											<CardContent>
+												<p>Code：
+													<a href="https://github.com/5skip/yumeniki" target="_blank" rel="noopener noreferrer">
+														https://github.com/5skip/yumeniki
+													</a>
+												</p>
+											</CardContent>
+										</div>
 									</div>
-								</Card>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div>
-								<Card className='flex flex-col aspect-square items-center justify-center'>
-									<CardContent>
-										<CardTitle>Parrotter</CardTitle>
-									</CardContent>
-									<CardContent>
-										<Image 
-											src="/works/parrotter.png"
-											width={200}
-											height={500}
-											alt='parrotter'
-											/>
-									</CardContent>
-									<div>
+								</div>
+							</CarouselItem>
+							<CarouselItem>
+								<div>
+									<div className='flex flex-col aspect-square items-center justify-center'>
 										<CardContent>
-											<p>概要：投稿した内容（画像とテキスト）をAIが再生成し、適切な表現に直してくれる「炎上しないSNS」。2024年 技育CAMP vol.2で作成。努力賞受賞。</p>
+											<CardTitle>Parrotter</CardTitle>
 										</CardContent>
 										<CardContent>
-											<p>制作期間：1週間</p>
+											<Image 
+												src="/works/parrotter.png"
+												width={200}
+												height={500}
+												alt='parrotter'
+												/>
 										</CardContent>
-										<CardContent>
-											<p>使用技術：Next.js, MUI, Firebase, Chat-GPT4</p>
-										</CardContent>
-										<CardContent>
-											<p>Code：
-												<a href="https://github.com/Tayuchi/TESNS" target="_blank" rel="noopener noreferrer">
-													https://github.com/Tayuchi/TESNS
-												</a>
-											</p>
-										</CardContent>
+										<div>
+											<CardContent>
+												<p>概要：投稿した内容（画像とテキスト）をAIが再生成し、適切な表現に直してくれる「炎上しないSNS」。2024年 技育CAMP vol.2で作成。努力賞受賞。</p>
+											</CardContent>
+											<CardContent>
+												<p>制作期間：1週間</p>
+											</CardContent>
+											<CardContent>
+												<p>使用技術：Next.js, MUI, Firebase, Chat-GPT4</p>
+											</CardContent>
+											<CardContent>
+												<p>Code：
+													<a href="https://github.com/Tayuchi/TESNS" target="_blank" rel="noopener noreferrer">
+														https://github.com/Tayuchi/TESNS
+													</a>
+												</p>
+											</CardContent>
+										</div>
 									</div>
-								</Card>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div>
-								<Card className='flex flex-col aspect-square items-center justify-center'>
-									<CardContent>
-										<CardTitle>Photo Pickle</CardTitle>
-									</CardContent>
-									<CardContent>
-										<Image 
-											src="/works/photopickle.png"
-											width={150}
-											height={500}
-											alt='photo-pickle'
-											/>
-									</CardContent>
-									<div>
+								</div>
+							</CarouselItem>
+							<CarouselItem>
+								<div>
+									<div className='flex flex-col aspect-square items-center justify-center'>
 										<CardContent>
-											<p>Google Street Viewの画像と同じ写真を現地で取り、2枚の画像の類似度でスコアを出すゲームアプリ。技育博にて出展。企業賞(DeNA, ゆめみ)受賞。</p>
+											<CardTitle>Photo Pickle</CardTitle>
 										</CardContent>
 										<CardContent>
-											<p>制作期間：1ヶ月</p>
+											<Image 
+												src="/works/photopickle.png"
+												width={150}
+												height={500}
+												alt='photo-pickle'
+												/>
 										</CardContent>
-										<CardContent>
-											<p>使用技術：Next.js, MUI, NextAuth, Prisma, Supabase, GCP, Vercel</p>
-										</CardContent>
-										<CardContent>
-											<p>Code：
-												<a href="https://github.com/Kabuto0421/PhotoPickle" target="_blank" rel="noopener noreferrer">
-													https://github.com/Kabuto0421/PhotoPickle
-												</a>
-											</p>
-										</CardContent>
+										<div>
+											<CardContent>
+												<p>Google Street Viewの画像と同じ写真を現地で取り、2枚の画像の類似度でスコアを出すゲームアプリ。技育博にて出展。企業賞(DeNA, ゆめみ)受賞。</p>
+											</CardContent>
+											<CardContent>
+												<p>制作期間：1ヶ月</p>
+											</CardContent>
+											<CardContent>
+												<p>使用技術：Next.js, MUI, NextAuth, Prisma, Supabase, GCP, Vercel</p>
+											</CardContent>
+											<CardContent>
+												<p>Code：
+													<a href="https://github.com/Kabuto0421/PhotoPickle" target="_blank" rel="noopener noreferrer">
+														https://github.com/Kabuto0421/PhotoPickle
+													</a>
+												</p>
+											</CardContent>
+										</div>
 									</div>
-								</Card>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div>
-								<Card className='postion-absolute flex flex-col aspect-square items-center justify-center'>
-									<CardContent>
-										<CardTitle>Portfolio Site</CardTitle>
-									</CardContent>
-									<CardContent>
-										<Image 
-											src="/works/portfolio.png"
-											width={200}
-											height={500}
-											alt='photo-pickle'
-											/>
-									</CardContent>
-									<div>
+								</div>
+							</CarouselItem>
+							<CarouselItem>
+								<div>
+									<div className='postion-absolute flex flex-col aspect-square items-center justify-center'>
 										<CardContent>
-											<p>概要：当ポートフォリオサイトです。</p>
+											<CardTitle>Portfolio Site</CardTitle>
 										</CardContent>
 										<CardContent>
-											<p>制作期間：1ヶ月</p>
+											<Image 
+												src="/works/portfolio.png"
+												width={200}
+												height={500}
+												alt='photo-pickle'
+												/>
 										</CardContent>
-										<CardContent>
-											<p>使用技術：Next.js, shadcn/ui, framer-motion, emailjs, Vercel</p>
-										</CardContent>
-										<CardContent>
-											<p>Code：
-												<a href="https://github.com/Tayuchi/portfolio" target="_blank" rel="noopener noreferrer">
-													https://github.com/Tayuchi/portfolio
-												</a>
-											</p>
-										</CardContent>
-										<CardContent>
-											<p>Link：
-												<a href="https://portfolio-72weoviql-tayuchis-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
-													https://portfolio-72weoviql-tayuchis-projects.vercel.app/
-												</a>
-											</p>
-										</CardContent>
+										<div>
+											<CardContent>
+												<p>概要：当ポートフォリオサイトです。</p>
+											</CardContent>
+											<CardContent>
+												<p>制作期間：1ヶ月</p>
+											</CardContent>
+											<CardContent>
+												<p>使用技術：Next.js, shadcn/ui, framer-motion, emailjs, Vercel</p>
+											</CardContent>
+											<CardContent>
+												<p>Code：
+													<a href="https://github.com/Tayuchi/portfolio" target="_blank" rel="noopener noreferrer">
+														https://github.com/Tayuchi/portfolio
+													</a>
+												</p>
+											</CardContent>
+											<CardContent>
+												<p>Link：
+													<a href="https://portfolio-72weoviql-tayuchis-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
+														https://portfolio-72weoviql-tayuchis-projects.vercel.app/
+													</a>
+												</p>
+											</CardContent>
+										</div>
 									</div>
-								</Card>
-							</div>
-						</CarouselItem>
-				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
-			</Carousel>
-											</Card>
+								</div>
+							</CarouselItem>
+					</CarouselContent>
+					<CarouselPrevious />
+					<CarouselNext />
+				</Carousel>
+			</Card>
 		</div>
   )
 }
