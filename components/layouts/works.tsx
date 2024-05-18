@@ -44,7 +44,7 @@ const Works = () => {
 											<p>制作期間：1週間</p>
 										</CardContent>
 										<CardContent>
-											<p>仕様技術：Next.js, Django, Chat-GPT4</p>
+											<p>使用技術：Next.js, NextAuth, Django, Chat-GPT4</p>
 										</CardContent>
 										<CardContent>
 											<p>Link：
@@ -79,12 +79,82 @@ const Works = () => {
 											<p>制作期間：1週間</p>
 										</CardContent>
 										<CardContent>
-											<p>仕様技術：Next.js, Django, Chat-GPT4</p>
+											<p>使用技術：Next.js, MUI, Firebase, Chat-GPT4</p>
 										</CardContent>
 										<CardContent>
 											<p>Link：
-												<a href="https://github.com/5skip/yumeniki" target="_blank" rel="noopener noreferrer">
-													https://github.com/5skip/yumeniki
+												<a href="https://github.com/Tayuchi/TESNS" target="_blank" rel="noopener noreferrer">
+													https://github.com/Tayuchi/TESNS
+												</a>
+											</p>
+										</CardContent>
+									</div>
+								</Card>
+							</div>
+						</CarouselItem>
+						<CarouselItem>
+							<div>
+								<Card className='card flex flex-col aspect-square items-center justify-center p-10'>
+									<CardContent>
+										<CardTitle>Photo Pickle</CardTitle>
+									</CardContent>
+									<CardContent>
+										<Image 
+											src="/works/photopickle.png"
+											width={200}
+											height={500}
+											alt='photo-pickle'
+											/>
+									</CardContent>
+									<div>
+										<CardContent>
+											<p>Google Street Viewの画像と同じ写真を現地で取り、2枚の画像の類似度でスコアを出すゲームアプリ。技育博にて出展。企業賞(DeNA, ゆめみ)受賞。</p>
+										</CardContent>
+										<CardContent>
+											<p>制作期間：1ヶ月</p>
+										</CardContent>
+										<CardContent>
+											<p>使用技術：Next.js, MUI, NextAuth, Prisma, Supabase, GCP, Vercel</p>
+										</CardContent>
+										<CardContent>
+											<p>Link：
+												<a href="https://github.com/Kabuto0421/PhotoPickle" target="_blank" rel="noopener noreferrer">
+													https://github.com/Kabuto0421/PhotoPickle
+												</a>
+											</p>
+										</CardContent>
+									</div>
+								</Card>
+							</div>
+						</CarouselItem>
+						<CarouselItem>
+							<div>
+								<Card className='card flex flex-col aspect-square items-center justify-center p-10'>
+									<CardContent>
+										<CardTitle>Portfolio Site</CardTitle>
+									</CardContent>
+									<CardContent>
+										<Image 
+											src="/works/portfolio.png"
+											width={200}
+											height={500}
+											alt='photo-pickle'
+											/>
+									</CardContent>
+									<div>
+										<CardContent>
+											<p>概要：当ポートフォリオサイトです。</p>
+										</CardContent>
+										<CardContent>
+											<p>制作期間：1ヶ月</p>
+										</CardContent>
+										<CardContent>
+											<p>使用技術：Next.js, shadcn/ui, framer-motion, Vercel</p>
+										</CardContent>
+										<CardContent>
+											<p>Link：
+												<a href="https://github.com/Tayuchi/portfolio" target="_blank" rel="noopener noreferrer">
+													https://github.com/Tayuchi/portfolio
 												</a>
 											</p>
 										</CardContent>
